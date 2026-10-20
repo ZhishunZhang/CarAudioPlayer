@@ -1,0 +1,19 @@
+// 顶层 build 文件 - 项目级配置
+plugins {
+    // AGP 版本：8.7.3 兼容 Android Studio 2025.2.2 + Gradle 8.13
+    id 'com.android.application' version '8.7.3' apply false
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

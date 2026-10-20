@@ -1,0 +1,35 @@
+<resources>
+    <!-- ===== 深色车机主题（新增方案配色） ===== -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 品牌色：青绿（与视觉稿一致） -->
+    <color name="color_primary">#FF31C27C</color>
+    <color name="color_primary_dark">#FF1FA368</color>
+    <color name="color_accent">#FF31C27C</color>
+
+    <!-- 背景层级 -->
+    <color name="bg_main">#FF0E1116</color>
+    <color name="bg_nav">#FF12161D</color>
+    <color name="bg_card">#FF171C23</color>
+    <color name="bg_card_pressed">#FF1F262F</color>
+    <color name="bg_mini_player">#FF1A2028</color>
+
+    <!-- 文字 -->
+    <color name="text_primary">#FFF0F3F7</color>
+    <color name="text_secondary">#FF93A0AC</color>
+    <color name="text_hint">#FF5C6670</color>
+
+    <!-- 分割线 / 边框 -->
+    <color name="divider">#FF232B35</color>
+
+    <!-- 播放高亮 -->
+    <color name="playing_tint">#FF31C27C</color>
+    <color name="playing_bg">#FF1E2A25</color>
+
+    <!-- VIP 角标金橙 -->
+    <color name="vip_gold">#FFD9A441</color>
+
+    <!-- 危险/强调红（收藏红心等） -->
+    <color name="color_red">#FFE05A5A</color>
+</resources>

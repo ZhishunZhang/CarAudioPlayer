@@ -1,0 +1,28 @@
+<resources>
+    <!-- ===== 车规触控与布局尺寸 ===== -->
+
+    <!-- 左侧导航栏宽度 -->
+    <dimen name="nav_bar_width">112dp</dimen>
+
+    <!-- 迷你播放条高度 -->
+    <dimen name="mini_player_height">88dp</dimen>
+
+    <!-- 播放页大按钮直径 -->
+    <dimen name="play_button_size">88dp</dimen>
+
+    <!-- 导航 Tab 触控目标高 -->
+    <dimen name="nav_tab_height">108dp</dimen>
+
+    <!-- 列表行最小高度（车规大行高） -->
+    <dimen name="list_item_height">76dp</dimen>
+
+    <!-- 圆角 -->
+    <dimen name="corner_radius_large">24dp</dimen>
+    <dimen name="corner_radius_medium">16dp</dimen>
+    <dimen name="corner_radius_small">10dp</dimen>
+
+    <!-- 页面边距与间距 -->
+    <dimen name="page_padding">24dp</dimen>
+    <dimen name="gap_normal">16dp</dimen>
+    <dimen name="gap_small">8dp</dimen>
+</resources>

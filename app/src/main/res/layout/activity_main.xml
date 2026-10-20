@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="horizontal">
+
+    <!-- ===== 左侧一级导航栏（左舵车主驾驶优先） ===== -->
+    <LinearLayout
+        android:layout_width="@dimen/nav_bar_width"
+        android:layout_height="match_parent"
+        android:background="@color/bg_nav"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- 顶部头像：进入"我的" -->
+        <FrameLayout
+            android:id="@+id/nav_avatar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="28dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_avatar"
+                android:contentDescription="头像"
+                android:padding="12dp"
+                android:src="@drawable/ic_person"
+                android:tint="@color/text_secondary" />
+        </FrameLayout>
+
+        <!-- 首页 -->
+        <LinearLayout
+            android:id="@+id/nav_home"
+            android:layout_width="88dp"
+            android:layout_height="@dimen/nav_tab_height"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/bg_tab_selected"
+            android:clickable="true"
+            android:gravity="center"
+            android:focusable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="首页"
+                android:src="@drawable/ic_nav_home"
+                android:tint="@color/playing_tint" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="首页"
+                android:textColor="@color/playing_tint"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 歌单 -->
+        <LinearLayout
+            android:id="@+id/nav_playlist"
+            android:layout_width="88dp"
+            android:layout_height="@dimen/nav_tab_height"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:focusable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_nav_playlist"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="歌单"
+                android:src="@drawable/ic_nav_playlist"
+                android:tint="@color/text_secondary" />
+
+            <TextView
+                android:id="@+id/tv_nav_playlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="歌单"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 榜单 -->
+        <LinearLayout
+            android:id="@+id/nav_rank"
+            android:layout_width="88dp"
+            android:layout_height="@dimen/nav_tab_height"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:focusable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_nav_rank"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="榜单"
+                android:src="@drawable/ic_nav_rank"
+                android:tint="@color/text_secondary" />
+
+            <TextView
+                android:id="@+id/tv_nav_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="榜单"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 搜索 -->
+        <LinearLayout
+            android:id="@+id/nav_search"
+            android:layout_width="88dp"
+            android:layout_height="@dimen/nav_tab_height"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:focusable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_nav_search"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="搜索"
+                android:src="@drawable/ic_nav_search"
+                android:tint="@color/text_secondary" />
+
+            <TextView
+                android:id="@+id/tv_nav_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="搜索"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ===== 右侧内容区（舞台层：全屏播放页覆盖层盖住"内容 + 迷你播放条"） ===== -->
+    <FrameLayout
+        android:id="@+id/player_stage"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 一级页面 + 二级页面叠加区 -->
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- ===== 底部常驻迷你播放条 ===== -->
+            <LinearLayout
+                android:id="@+id/mini_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mini_player_height"
+                android:background="@color/bg_mini_player"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_mini_cover"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/bg_mini_cover"
+                    android:contentDescription="封面"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_music_note" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_mini_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="未在播放"
+                        android:textColor="@color/text_primary"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_mini_singer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="点一首歌开始"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/btn_mini_next"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="下一曲"
+                        android:padding="14dp"
+                        android:src="@drawable/ic_next"
+                        android:tint="@color/text_primary" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/btn_mini_play"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:id="@+id/iv_mini_play"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_play_circle"
+                        android:contentDescription="播放/暂停"
+                        android:padding="18dp"
+                        android:src="@drawable/ic_play"
+                        android:tint="@color/black" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== 全屏播放页覆盖层：从播放条长出（不压返回栈） ===== -->
+        <FrameLayout
+            android:id="@+id/player_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

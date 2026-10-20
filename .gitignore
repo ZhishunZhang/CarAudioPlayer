@@ -1,0 +1,18 @@
+*.iml
+.gradle/
+build/
+.idea/
+local.properties
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+
+# 日志
+*.log
+
+# Node 依赖（tools 目录下用于生成文档的脚本依赖，体积大，无需上传）
+node_modules/
+
+# 学习总结演示文稿（含实习内容，不公开）
+学习总结.pptx

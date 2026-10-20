@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">耳朵说想你</string>
+    <string name="playlist_title">本地曲库</string>
+    <string name="mini_player_hint">未在播放</string>
+
+    <!-- ===== 动态文字（代码 setText 用，全部走资源，禁止硬编码） ===== -->
+    <string name="not_playing">未在播放</string>
+    <string name="tap_to_play_song">点一首歌开始</string>
+    <string name="search_suggest_section">搜索联想（点击直接播放）</string>
+    <string name="hot_search_section">热门搜索</string>
+    <string name="fav_songs_title_fmt">我喜欢的歌曲（%1$d）</string>
+    <string name="set_nickname_hint">点击设置昵称</string>
+    <string name="search_title_fmt">搜索：%1$s</string>
+    <string name="album_desc_fmt">专辑 · %1$s</string>
+    <string name="album_singer_fmt">歌手：%1$s</string>
+    <string name="unknown_singer">未知歌手</string>
+    <string name="loading">加载中…</string>
+    <string name="load_failed_check_relay">加载失败，请确认中转服务已启动</string>
+    <string name="home_load_failed">首页加载失败，请确认中转服务已启动</string>
+    <string name="category_empty">该分类暂无歌单</string>
+    <string name="rank_empty">暂无榜单数据</string>
+</resources>
